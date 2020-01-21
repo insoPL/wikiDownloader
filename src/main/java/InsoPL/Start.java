@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 
 
+/**
+ * Main File of program. It contains logic that makes Swing GUI and starts Base Thread where the real work is done.
+ */
 public class Start extends JDialog {
     private TextArea terminal;
     private JPanel contentPane;

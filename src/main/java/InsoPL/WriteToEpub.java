@@ -39,6 +39,7 @@ public class WriteToEpub {
         epubWriter.write(book, new FileOutputStream(stringToFilename(articleName)+".epub"));
     }
 
+    //  There may by problem with German special letters being deleted when used in article title
     static public String stringToFilename(String text){
         String ret = Normalizer.normalize(text, Normalizer.Form.NFD);
         ret = ret.replace('ą', 'a').replace('Ą', 'A')

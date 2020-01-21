@@ -3,6 +3,9 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+/**
+ * It parses raw html using jsoup. Then uses WriteToEpub class to store it in a ready-to-save format.
+ */
 public class WikiArticleConverter {
     public static WriteToEpub getWikiArticleFromDoc(Document doc){
         String title = doc.select("h1").text();

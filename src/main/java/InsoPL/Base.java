@@ -8,6 +8,11 @@ import java.awt.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * Base is a Thread class. While loop unlocks itself after clicking start button.
+ * Then Jsoup library is used to download wikipedia webpage which is then passed to WikiArticleConverter
+ * where its parsed and returned as WriteToEpubFile which is then saved it programs folder
+ */
 public class Base extends Thread {
     private TextArea terminal;
     private JTextField url;
