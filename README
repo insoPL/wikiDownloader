@@ -8,5 +8,5 @@ Bulding with gradle:
 	gradle compile
 	gradle run
 
-To build execturable jar file:
+To build executable jar file:
 	gradle jar	
