@@ -1,4 +1,4 @@
-package com.company;
+package InsoPL;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -29,6 +29,8 @@ public class Base extends Thread {
                 while (!stopped){
                     String lang_name = (String) lang.getSelectedItem();
                     Document doc = null;
+                    terminal.append("asdsadasdasdasd\n");
+
                     if(lang_name.equals("Polski"))
                         doc = Jsoup.connect("https://pl.wikipedia.org/wiki/"+url.getText()).get();
                     else if (lang_name.equals("Angielski"))
@@ -36,6 +38,8 @@ public class Base extends Thread {
 
                     else if (lang_name.equals("Niemiecki"))
                         doc = Jsoup.connect("https://de.wikipedia.org/wiki/"+url.getText()).get();
+                    terminal.append("asdsget2adasdasdasd\n");
+
 
                     String title = doc.select("h1").text();
                     terminal.append("Processing article\n");

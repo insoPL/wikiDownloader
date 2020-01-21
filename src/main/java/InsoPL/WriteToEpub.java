@@ -1,4 +1,4 @@
-package com.company;
+package InsoPL;
 
 import nl.siegmann.epublib.domain.Author;
 import nl.siegmann.epublib.domain.Book;

@@ -1,4 +1,4 @@
-package com.company;
+package InsoPL;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,8 +11,6 @@ public class Start extends JDialog {
     private JButton startButton;
     private JTextField UrltextField;
     private JComboBox lang;
-
-
 
     private Base base;
 
@@ -41,7 +39,6 @@ public class Start extends JDialog {
     public JComponent $$$getRootComponent$$$() {
         return contentPane;
     }
-
 
     public Start() {
         $$$setupUI$$$();
