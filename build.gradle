@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.company'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://github.com/psiegman/mvn-repo/raw/master/releases'
+    }
+}
+
+dependencies {
+    implementation 'org.jsoup:jsoup:1.10.3'
+    implementation('nl.siegmann.epublib:epublib-core:3.1') {
+        exclude group: 'xmlpull'
+    }
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
