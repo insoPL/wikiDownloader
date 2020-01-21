@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group 'com.company'
@@ -21,3 +22,5 @@ dependencies {
     }
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+mainClassName = "com.company.Start"
