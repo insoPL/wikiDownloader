@@ -2,7 +2,6 @@ package InsoPL;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 
 public class Start extends JDialog {
@@ -10,11 +9,11 @@ public class Start extends JDialog {
     private JPanel contentPane;
     private JButton startButton;
     private JTextField UrltextField;
-    private JComboBox lang;
+    private JComboBox<String> lang;
 
     private Base base;
 
-    private void $$$setupUI$$$() {
+    public Start() {
         createUIComponents();
         contentPane = new JPanel();
         BoxLayout boxLayout = new BoxLayout(contentPane, BoxLayout.Y_AXIS);
@@ -34,22 +33,9 @@ public class Start extends JDialog {
         UrltextField.setText("Kraków");
         panel2.add(UrltextField);
         panel2.add(lang);
-    }
-
-    public JComponent $$$getRootComponent$$$() {
-        return contentPane;
-    }
-
-    public Start() {
-        $$$setupUI$$$();
         setContentPane(contentPane);
         setModal(true);
-        startButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                base.Start();
-            }
-        });
+        startButton.addActionListener(actionEvent -> base.Start());
     }
 
     public static void main(String[] args) {
@@ -64,7 +50,7 @@ public class Start extends JDialog {
         UrltextField = new JTextField();
         UrltextField.setPreferredSize(new Dimension(250,25));
         terminal = new TextArea();
-        lang = new JComboBox(new String[]{"Polski", "Angielski", "Niemiecki"});
+        lang = new JComboBox<>(new String[]{"Polski", "Angielski", "Niemiecki"});
         base = new Base(terminal, UrltextField, lang);
     }
 }
